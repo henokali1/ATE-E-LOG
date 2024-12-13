@@ -60,7 +60,8 @@ def new_log():
         date = request.form.get('date')
         time = request.form.get('time')
         location = request.form.get('location')
-        initials = request.form.get('initials')
+        initials = str(request.form.getlist('initials'))
+        print('*'*15, initials, '*'*15)
         remarks = request.form.get('remarks')
 
         # Validation
